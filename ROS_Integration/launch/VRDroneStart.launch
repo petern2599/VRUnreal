@@ -1,0 +1,7 @@
+<launch>
+    <!--send drones on mission-->
+    <!--map your ned_x and ned_y from json file here-->
+    <node pkg="ROS_Integration" type="VehicleInfo" name="Vehicle_Info" output="screen"> </node>
+    <node pkg="ROS_Integration" type="FlyOverMe" name="Fly_Over_Me" output="screen"> </node>
+    <node pkg="ROS_Integration" type="FlyToTarget" name="Fly_To_Target" output="screen"> </node>
+</launch>

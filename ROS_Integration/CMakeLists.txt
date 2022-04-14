@@ -1,6 +1,20 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(ROS_Integration)
 
+set(AIRSIM_ROOT /home/petern25/AirSim)
+
+add_subdirectory("${AIRSIM_ROOT}/cmake/rpclib_wrapper" rpclib_wrapper)
+add_subdirectory("${AIRSIM_ROOT}/cmake/AirLib" AirLib)
+add_subdirectory("${AIRSIM_ROOT}/cmake/MavLinkCom" MavLinkCom)
+
+set(CMAKE_CXX_STANDARD 11)
+set(RPC_LIB_INCLUDES "${AIRSIM_ROOT}/external/rpclib/rpclib-2.2.1/include")
+set(RPC_LIB rpc)
+message(STATUS "found RPC_LIB_INCLUDE${RPC_LIB_INCLUDES}")
+
+find_package(OpenCV REQUIRED)
+find_package(Boost REQUIRED)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -13,6 +27,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   sensor_msgs
+  cv_bridge
+  image_transport
   genmsg
   message_generation
 )
@@ -24,7 +40,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
+ catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -111,7 +127,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ROS_Integration
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime cv_bridge image_transport
 #  DEPENDS system_lib
 )
 
@@ -122,8 +138,14 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  ${AIRSIM_ROOT}/AirLib/deps/eigen3
+  ${AIRSIM_ROOT}/AirLib/include
+  ${RPC_LIB_INCLUDES}
+  ${AIRSIM_ROOT}/MavLinkCom/include
+  ${AIRSIM_ROOT}/MavLinkCom/common_utils
 )
 
 ## Declare a C++ library
@@ -235,6 +257,36 @@ target_link_libraries(FlyToTarget ${catkin_LIBRARIES})
 add_executable(VehicleInfo src/VehicleInfo.cpp)
 target_link_libraries(VehicleInfo ${catkin_LIBRARIES})
 
+add_executable(FormationFlight src/FormationFlight.cpp)
+target_link_libraries(FormationFlight ${catkin_LIBRARIES})
+
+add_executable(LandingPads src/LandingPads.cpp)
+target_link_libraries(LandingPads ${catkin_LIBRARIES})
+
+add_executable(LineFollower src/LineFollower.cpp)
+target_link_libraries(LineFollower ${catkin_LIBRARIES})
+
+add_executable(MultiArrayTest src/MultiArrayTest.cpp)
+target_link_libraries(MultiArrayTest ${catkin_LIBRARIES})
+
+add_executable(FlightHistory src/FlightHistory.cpp)
+target_link_libraries(FlightHistory ${catkin_LIBRARIES})
+
+add_executable(ManualControl src/ManualControl.cpp)
+target_link_libraries(ManualControl ${catkin_LIBRARIES})
+
+add_executable(RingWaypoints src/RingWaypoints.cpp)
+target_link_libraries(RingWaypoints ${catkin_LIBRARIES})
+
+add_executable(GetLineCentroid src/GetLineCentroid.cpp)
+target_link_libraries(GetLineCentroid ${OpenCV_LIBS})
+target_link_libraries(GetLineCentroid ${catkin_LIBRARIES})
+
 add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_server ROS_Integration_gencpp)
+
+catkin_install_python(PROGRAMS
+  scripts/GetAirsimImage.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

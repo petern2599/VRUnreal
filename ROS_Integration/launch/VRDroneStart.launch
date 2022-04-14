@@ -4,4 +4,8 @@
     <node pkg="ROS_Integration" type="VehicleInfo" name="Vehicle_Info" output="screen"> </node>
     <node pkg="ROS_Integration" type="FlyOverMe" name="Fly_Over_Me" output="screen"> </node>
     <node pkg="ROS_Integration" type="FlyToTarget" name="Fly_To_Target" output="screen"> </node>
+    <node pkg="ROS_Integration" type="FormationFlight" name="Formation_Flight" output="screen"> </node>
+    <node pkg="ROS_Integration" type="LandingPads" name="Landing_Pad" output="screen"> </node>
+    <node pkg="ROS_Integration" type="ManualControl" name="Manual_Controller" output="screen"> </node>
+
 </launch>

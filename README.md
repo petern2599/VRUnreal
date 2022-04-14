@@ -1,5 +1,5 @@
 # UnrealVR_ROS
-Contains files that use ROS Integration with Unreal Engine 4 and ROS Melodic. For this repository, the files are used to integrate ROS capabalities alongside with UE4 to create a virtual reality interface to conduct unmanned air traffic management (UTM) for unmanned aerial systems (UAS). The project uses the Airsim plugin with ROSIntegration.<br/>
+Contains files that use ROS Integration with Unreal Engine 4 and ROS Melodic. For this repository, the files are used to integrate ROS capabalities alongside with UE4 to create a virtual reality interface to conduct unmanned air traffic management (UTM) for unmanned aerial systems (UAS). The project uses the Airsim plugin with ROSIntegration and other miscellaneous plugins. This also makes use of WSL 2 as a virtual machine for ROS Melodic on Ubuntu 18.04. <br/>
 
 Access files from "development" branch
 

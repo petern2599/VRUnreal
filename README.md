@@ -22,7 +22,7 @@ When using ROSIntegration, the sequence is the following:
 
 1.)Initialize ROSBridge server in bson_only_mode<br/>
 2.)Run any ROS scripts<br/>
-3.)Insert C++ actors that is used for ROS into environment in UE4<br/>
+3.)Insert C++ actors that intialize rostopic and messages at the start of runtime into environment in UE4<br/>
 4.)Press play in UE4<br/>
 
 ## FAQ:

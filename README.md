@@ -42,4 +42,4 @@ If the actor spawns during runtime and the rostopic/rosnode is initialize during
 ### ROSIntegration is not loading correctly, causing my UE4 project to not load.
 If this happens to you, delete the plugin from your project and reinstall/re-clone the ROSIntegration repository from 'code-iai' again, then rebuild your project. This solution has worked for me.
 ### Can I clone or download your UE4 project from here?
-I wish I could, unfortunately I am unable to upload the project files in Github as it exceeds the allowable file size to upload. Even with Github LFS (if I configured it correctly...), I was unable to upload it.
+Unfortunately I am unable to upload the project files in Github as it exceeds the allowable file size to upload. Even with Github LFS (if I configured it correctly...), I was unable to upload it.

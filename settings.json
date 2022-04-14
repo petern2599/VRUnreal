@@ -1,0 +1,184 @@
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "ClockType": "SteppableClock",
+  "PawnPaths": {
+    "Drone0Pawn": { "PawnBP": "Class'/Game/VR_Content/VR/Quadrotor_Blueprints/Quad_0/BP_FlyingPawn_0.BP_FlyingPawn_0_C'" },
+    "Drone1Pawn": { "PawnBP": "Class'/Game/VR_Content/VR/Quadrotor_Blueprints/Quad_1/BP_FlyingPawn_1.BP_FlyingPawn_1_C'" },
+    "Drone2Pawn": { "PawnBP": "Class'/Game/VR_Content/VR/Quadrotor_Blueprints/Quad_2/BP_FlyingPawn_2.BP_FlyingPawn_2_C'" }
+  },
+  "Vehicles": {
+    "Drone0": {
+      "VehicleType": "PX4Multirotor",
+      "PawnPath": "Drone0Pawn",
+      "UseSerial": false,
+      "LockStep": true,
+      "UseTcp": true,
+      "TcpPort": 4560,
+      "ControlIp": "remote",
+      "ControlPortLocal": 14540,
+      "ControlPortRemote": 14580,
+      "UdpIp": "172.27.1.225",
+      "UdpPort": 14560,
+      "LocalHostIp": "172.27.0.1",
+      "Parameters": {
+        "NAV_RCL_ACT": 0,
+        "NAV_DLL_ACT": 0,
+        "COM_OBL_ACT": 1,
+        "LPE_LAT": 47.641468,
+        "LPE_LON": -122.140165
+      },
+      "Cameras": {
+        "MyCamera0": {
+          "CaptureSettings": [
+            {
+              "PublishToRos": 1,
+              "ImageType": 0,
+              "Width": 256,
+              "Height": 144,
+              "FOV_Degrees": 90,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "AutoExposureMaxBrightness": 0.64,
+              "AutoExposureMinBrightness": 0.03,
+              "MotionBlurAmount": 0,
+              "DepthOfFieldFstop": 2.8,
+              "DepthOfFieldFocalDistance": 200.0,
+              "DepthOfFieldFocalRegion": 200.0,
+              "TargetGamma": 1.0,
+              "ProjectionMode": "",
+              "OrthoWidth": 5.12
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": -90,
+          "Roll": 0,
+          "Yaw": 0
+        }
+      },
+      "X": -3.0,
+      "Y": -3.0,
+      "Z": 0,
+      "Pitch": 0,
+      "Roll": 0,
+      "Yaw": 0
+    },
+    "Drone1": {
+      "VehicleType": "PX4Multirotor",
+      "PawnPath": "Drone1Pawn",
+      "UseSerial": false,
+      "LockStep": true,
+      "UseTcp": true,
+      "TcpPort": 4561,
+      "ControlIp": "remote",
+      "ControlPortLocal": 14541,
+      "ControlPortRemote": 14581,
+      "UdpIp": "172.27.1.225",
+      "UdpPort": 14560,
+      "LocalHostIp": "172.27.0.1",
+      "Parameters": {
+        "NAV_RCL_ACT": 0,
+        "NAV_DLL_ACT": 0,
+        "COM_OBL_ACT": 1,
+        "LPE_LAT": 47.641468,
+        "LPE_LON": -122.140165
+      },
+      "Cameras": {
+        "MyCamera1": {
+          "CaptureSettings": [
+            {
+              "PublishToRos": 1,
+              "ImageType": 0,
+              "Width": 256,
+              "Height": 144,
+              "FOV_Degrees": 90,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "AutoExposureMaxBrightness": 0.64,
+              "AutoExposureMinBrightness": 0.03,
+              "MotionBlurAmount": 0,
+              "DepthOfFieldFstop": 2.8,
+              "DepthOfFieldFocalDistance": 200.0,
+              "DepthOfFieldFocalRegion": 200.0,
+              "TargetGamma": 1.0,
+              "ProjectionMode": "",
+              "OrthoWidth": 5.12
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": -90,
+          "Roll": 0,
+          "Yaw": 0
+        }
+      },
+      "X": -3,
+      "Y": 0.0,
+      "Z": 0,
+      "Pitch": 0,
+      "Roll": 0,
+      "Yaw": 0
+    },
+    "Drone2": {
+      "VehicleType": "PX4Multirotor",
+      "PawnPath": "Drone2Pawn",
+      "UseSerial": false,
+      "LockStep": true,
+      "UseTcp": true,
+      "TcpPort": 4562,
+      "ControlIp": "remote",
+      "ControlPortLocal": 14542,
+      "ControlPortRemote": 14582,
+      "UdpIp": "172.27.1.225",
+      "UdpPort": 14560,
+      "LocalHostIp": "172.27.0.1",
+      "Parameters": {
+        "NAV_RCL_ACT": 0,
+        "NAV_DLL_ACT": 0,
+        "COM_OBL_ACT": 1,
+        "LPE_LAT": 47.641468,
+        "LPE_LON": -122.140165
+      },
+      "Cameras": {
+        "MyCamera2": {
+          "CaptureSettings": [
+            {
+              "PublishToRos": 1,
+              "ImageType": 0,
+              "Width": 256,
+              "Height": 144,
+              "FOV_Degrees": 90,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "AutoExposureMaxBrightness": 0.64,
+              "AutoExposureMinBrightness": 0.03,
+              "MotionBlurAmount": 0,
+              "DepthOfFieldFstop": 2.8,
+              "DepthOfFieldFocalDistance": 200.0,
+              "DepthOfFieldFocalRegion": 200.0,
+              "TargetGamma": 1.0,
+              "ProjectionMode": "",
+              "OrthoWidth": 5.12
+            }
+          ],
+
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": -90,
+          "Roll": 0,
+          "Yaw": 0
+        }
+      },
+      "X": -3.0,
+      "Y": 3.0,
+      "Z": 0,
+      "Pitch": 0,
+      "Roll": 0,
+      "Yaw": 0
+    }
+    }
+}

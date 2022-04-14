@@ -21,9 +21,10 @@ The reason for this is because ROS Integration is not compatible with ROSBridge'
 When using ROSIntegration, the sequence is the following:
 
 1.)Initialize ROSBridge server in bson_only_mode<br/>
-2.)Run any ROS scripts<br/>
-3.)Insert C++ actors that intialize rostopic and messages at the start of runtime into environment in UE4<br/>
-4.)Press play in UE4<br/>
+2.)Make sure to insert the WSL 2 application's IP address in the address parameter for the ROSIntegration gameinstance <br/>
+3.)Run any ROS scripts<br/>
+4.)Insert C++ actors that intialize rostopic and messages at the start of runtime into environment in UE4<br/>
+5.)Press play in UE4<br/>
 
 ## FAQ:
 ### I am experiencing large FPS drops in my project.

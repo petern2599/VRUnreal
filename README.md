@@ -37,3 +37,5 @@ If you do not see the ROS topic, make sure to check the following:<br/>
 If the actor spawns during runtime and the rostopic/rosnode is initialize during BeginPlay, it WILL NOT WORK. For any publishing/subscribing actors that are going to be used, the actors must be spawned before running project in UE4. Unless it initializes the rostopic/rosnode during runtime. 
 ### ROSIntegration is not loading correctly, causing my UE4 project to not load.
 If this happens to you, delete the plugin from your project and reinstall/re-clone the ROSIntegration repository from 'code-iai' again, then rebuild your project. This solution has worked for me.
+### Can I clone your UE4 project?
+I wish I could, but unfortunately Github is unable to transfer the larger project files, even with Github LFS (at least if I am configuring it correctly...), so the best I am able to do is share my scripts used which should help understand how to use ROSIntegration.

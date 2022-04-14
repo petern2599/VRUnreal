@@ -41,3 +41,5 @@ If you still not seeing the ROS topic, close Unreal Engine 4 and open it up agai
 If the actor spawns during runtime and the rostopic/rosnode is initialize during BeginPlay, it WILL NOT WORK. BeginPlay refers to the first frame of runtime, so if you spawn in actor after the first frame to initialize rostopic/rosnode it will not execute the functions. Thus in order to run the functions that intialize the rostopic/rosnode and publish/subscribe to the ROS messages, you need to create C++ functions that have some custom event in Unreal Engine 4 to execute it during runtime.
 ### ROSIntegration is not loading correctly, causing my UE4 project to not load.
 If this happens to you, delete the plugin from your project and reinstall/re-clone the ROSIntegration repository from 'code-iai' again, then rebuild your project. This solution has worked for me.
+### Can I clone or download your UE4 project from here?
+I wish I could, unfortunately I am unable to upload the project files in Github as it exceeds the allowable file size to upload. Even with Github LFS (if I configured it correctly...), I was unable to upload it.

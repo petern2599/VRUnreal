@@ -3,6 +3,8 @@ Contains files that use ROS Integration with Unreal Engine 4 and ROS Melodic. Fo
 
 Access files from "development" branch
 
+![My Image](ROSTest-Preview.png)
+
 ## Setting Up and Using ROS Integration
 To setup ROS Integration follow the setup steps from https://github.com/code-iai/ROSIntegration
 

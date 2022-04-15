@@ -3,7 +3,7 @@ Contains files that use ROS Integration with Unreal Engine 4 and ROS Melodic. Fo
 
 Access files from "development" branch
 
-![My Image](ROSTest-Preview.png)
+![VR Takeoff with ROS and Airsim](https://user-images.githubusercontent.com/42896783/163512672-737d02ac-3e46-4291-8e29-eac0923193f8.png)
 
 ## Setting Up and Using ROS Integration
 To setup ROS Integration follow the setup steps from https://github.com/code-iai/ROSIntegration
